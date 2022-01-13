@@ -1,0 +1,17 @@
+version: "3"
+services:
+  multi-poetry:
+    image: test:multi-poetry
+    build:
+      context: ./
+      dockerfile: poetry-ms.Dockerfile
+  multi-venv:
+    image: test:multi-venv
+    build:
+      context: ./
+      dockerfile: ./venv-ms.Dockerfile
+  single:
+    image: test:single
+    build:
+      context: ./
+      dockerfile: ./Dockerfile
